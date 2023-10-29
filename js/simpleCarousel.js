@@ -1,8 +1,9 @@
 // The code will be long
 // because I want to use MVC Design Pattern for this.
+document.addEventListener("DOMContentLoaded", function () {
+    // Your initialization code here
 
-window.onload = function () {
-  const helpers = function () {
+    const helpers = function () {
     function getDOMElements(DOMSelectors) {
       let DOMElements = {};
       for (let selector in DOMSelectors) {
@@ -19,7 +20,7 @@ window.onload = function () {
 
   }();
 
-  const modal = function () {
+    const modal = function () {
     const state = {
       counter: 0,
       intervalID: 0 };
@@ -175,10 +176,11 @@ window.onload = function () {
 
   }(modal, view, helpers);
 
+
   controller.initApp();
 
   window.addEventListener("resize", () => {
     controller.removeEventListeners();
     controller.initApp();
-  });
-};
+    });
+});
